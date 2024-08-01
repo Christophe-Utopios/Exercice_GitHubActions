@@ -1,0 +1,15 @@
+name: configuration du projet
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du projet
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: mvn install
+
+      - name: Build application
+        run: echo "Build de mon application..."
